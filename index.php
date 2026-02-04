@@ -2,7 +2,9 @@
 $name = "Qamarbek Komilov";
 $alias = "qamarbek@root";
 $title = "Junior Web Developer | Cyber Style";
-$about = "Cyber-minded web developer. I build fast, clean and secure web interfaces. Learning every day. Code is my weapon.";
+$about = "I am a motivated junior web developer with a strong interest in modern web technologies. 
+I enjoy building clean, responsive, and user-friendly websites using HTML, CSS, and PHP. 
+Every day I improve my skills, learn new tools, and work on real projects to become a professional developer.";
 $email = "uzb437340@email.com";
 $github = "https://github.com/uzb437340-design";
 $telegram = "https://t.me/Komilov_l7";
@@ -32,25 +34,25 @@ body{
   overflow-x:hidden;
 }
 
-/* MATRIX */
+/* MATRIX BACKGROUND */
 canvas{
   position:fixed;
   inset:0;
   z-index:-1;
 }
 
-/* TERMINAL WINDOW */
+/* TERMINAL CONTAINER */
 .terminal{
   max-width:960px;
   margin:80px auto;
   padding:35px;
   border:1px solid #00ff9c;
-  background:rgba(0,255,156,0.05);
-  box-shadow:0 0 40px rgba(0,255,156,0.35);
-  border-radius:12px;
+  background:rgba(0,255,156,0.06);
+  box-shadow:0 0 45px rgba(0,255,156,0.35);
+  border-radius:14px;
 }
 
-/* HEADER BAR */
+/* WINDOW BAR */
 .bar{
   display:flex;
   gap:10px;
@@ -80,6 +82,24 @@ canvas{
   50%{opacity:0}
 }
 
+/* ABOUT PANEL */
+.about-box{
+  margin-top:20px;
+  padding:22px;
+  border-left:4px solid #00ff9c;
+  background:rgba(0,255,156,0.12);
+  box-shadow:0 0 30px rgba(0,255,156,0.4);
+  color:#ecfeff;
+  line-height:1.7;
+}
+
+.about-title{
+  margin-bottom:10px;
+  color:#00ff9c;
+  font-size:18px;
+  text-shadow:0 0 10px #00ff9c;
+}
+
 /* BUTTONS */
 .buttons{
   margin-top:25px;
@@ -103,7 +123,7 @@ canvas{
 /* SECTIONS */
 section{
   max-width:1100px;
-  margin:60px auto;
+  margin:70px auto;
   padding:0 20px;
 }
 h2{
@@ -117,10 +137,10 @@ h2{
   gap:20px;
 }
 .card{
-  border:1px solid rgba(0,255,156,0.3);
+  border:1px solid rgba(0,255,156,0.35);
   padding:25px;
-  background:rgba(0,255,156,0.03);
-  box-shadow:0 0 25px rgba(0,255,156,0.2);
+  background:rgba(0,255,156,0.05);
+  box-shadow:0 0 25px rgba(0,255,156,0.25);
 }
 
 /* FOOTER */
@@ -154,8 +174,10 @@ footer{
   <div class="line"><span class="prompt"><?php echo $alias; ?>:</span>~$ role</div>
   <div class="line"><?php echo $title; ?></div>
 
-  <div class="line"><span class="prompt"><?php echo $alias; ?>:</span>~$ about</div>
-  <div class="line"><?php echo $about; ?></div>
+  <div class="about-box">
+    <div class="about-title">> ABOUT ME</div>
+    <?php echo $about; ?>
+  </div>
 
   <div class="line"><span class="prompt"><?php echo $alias; ?>:</span>~$ <span class="cursor">█</span></div>
 
@@ -170,7 +192,7 @@ footer{
 <section id="skills">
   <h2>> skills</h2>
   <div class="grid">
-    <div class="card">HTML / CSS / Responsive</div>
+    <div class="card">HTML / CSS / Responsive Design</div>
     <div class="card">PHP / MySQL (basic)</div>
     <div class="card">Git / GitHub</div>
     <div class="card">Learning JavaScript</div>
@@ -212,7 +234,7 @@ const columns = canvas.width / fontSize;
 const drops = Array(Math.floor(columns)).fill(1);
 
 function draw(){
-  ctx.fillStyle = "rgba(0,0,0,0.05)";
+  ctx.fillStyle = "rgba(0,0,0,0.06)";
   ctx.fillRect(0,0,canvas.width,canvas.height);
   ctx.fillStyle = "#00ff9c";
   ctx.font = fontSize+"px monospace";
