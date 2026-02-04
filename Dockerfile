@@ -10,7 +10,7 @@ RUN docker-php-ext-install pdo_sqlite
 
 WORKDIR /var/www/html
 
-COPY ./init.php /var/www/html
+COPY ./index.php /var/www/html
 
 
 
