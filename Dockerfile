@@ -8,9 +8,11 @@ RUN apt-get update && apt-get install -y \
 
 RUN docker-php-ext-install pdo_sqlite
 
-COPY init.php ./
-
 WORKDIR /var/www/html
+
+COPY ./init.php /var/www/html
+
+
 
 # RUN sed -i 's|/var/www/html|/var/www/html/public|g' \
 #   /etc/apache2/sites-available/000-default.conf
