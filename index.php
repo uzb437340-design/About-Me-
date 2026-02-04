@@ -1,6 +1,5 @@
 <?php
 $name = "Qamarbek Komilov";
-$alias = "qamarbek@root";
 $title = "Junior Web Developer | Cyber Style";
 $about = "I am a motivated junior web developer with a strong interest in modern web technologies. 
 I enjoy building clean, responsive, and user-friendly websites using HTML, CSS, and PHP. 
